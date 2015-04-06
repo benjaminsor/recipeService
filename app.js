@@ -13,6 +13,8 @@ var routes = require('./routes');
 
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 //HEADERS
 app.use(function(req, res, next) {
 	res.set('Access-Control-Allow-Origin', 'http://localhost:8100');
@@ -84,5 +86,7 @@ mongoose.connect(mongooseUri, options);
 
 
 
-app.listen(8888);
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'));
+});
 
