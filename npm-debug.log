@@ -1,0 +1,86 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'i', '--save', 'mondodb-uri' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 warn package.json services.recipes@1.0.0 No repository field.
+5 warn package.json services.recipes@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'mondodb-uri', null ]
+8 verbose cache add name=undefined spec="mondodb-uri" args=["mondodb-uri",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'mondodb-uri',
+9 verbose parsed url   path: 'mondodb-uri',
+9 verbose parsed url   href: 'mondodb-uri' }
+10 silly lockFile e1563750-mondodb-uri mondodb-uri
+11 verbose lock mondodb-uri /Users/benjaminsorensen/.npm/e1563750-mondodb-uri.lock
+12 silly lockFile e1563750-mondodb-uri mondodb-uri
+13 silly lockFile e1563750-mondodb-uri mondodb-uri
+14 verbose addNamed [ 'mondodb-uri', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile ef226a31-mondodb-uri mondodb-uri@
+17 verbose lock mondodb-uri@ /Users/benjaminsorensen/.npm/ef226a31-mondodb-uri.lock
+18 silly addNameRange { name: 'mondodb-uri', range: '*', hasData: false }
+19 verbose request where is /mondodb-uri
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 8a0cde51fbf6d609
+22 verbose url raw /mondodb-uri
+23 verbose url resolving [ 'https://registry.npmjs.org/', './mondodb-uri' ]
+24 verbose url resolved https://registry.npmjs.org/mondodb-uri
+25 verbose request where is https://registry.npmjs.org/mondodb-uri
+26 info trying registry request attempt 1 at 14:46:05
+27 http GET https://registry.npmjs.org/mondodb-uri
+28 http 404 https://registry.npmjs.org/mondodb-uri
+29 verbose headers { date: 'Mon, 06 Apr 2015 20:45:57 GMT',
+29 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 verbose headers   'content-type': 'application/json',
+29 verbose headers   'cache-control': 'max-age=0',
+29 verbose headers   'content-length': '51',
+29 verbose headers   'accept-ranges': 'bytes',
+29 verbose headers   via: '1.1 varnish',
+29 verbose headers   age: '0',
+29 verbose headers   'x-served-by': 'cache-sjc3134-SJC',
+29 verbose headers   'x-cache': 'MISS',
+29 verbose headers   'x-cache-hits': '0',
+29 verbose headers   'x-timer': 'S1428353156.813555,VS0,VE360',
+29 verbose headers   'keep-alive': 'timeout=10, max=50',
+29 verbose headers   connection: 'Keep-Alive' }
+30 silly registry.get cb [ 404,
+30 silly registry.get   { date: 'Mon, 06 Apr 2015 20:45:57 GMT',
+30 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=0',
+30 silly registry.get     'content-length': '51',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '0',
+30 silly registry.get     'x-served-by': 'cache-sjc3134-SJC',
+30 silly registry.get     'x-cache': 'MISS',
+30 silly registry.get     'x-cache-hits': '0',
+30 silly registry.get     'x-timer': 'S1428353156.813555,VS0,VE360',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 silly lockFile ef226a31-mondodb-uri mondodb-uri@
+32 silly lockFile ef226a31-mondodb-uri mondodb-uri@
+33 error 404 404 Not Found: mondodb-uri
+33 error 404
+33 error 404 'mondodb-uri' is not in the npm registry.
+33 error 404 You should bug the author to publish it
+33 error 404 It was specified as a dependency of 'services.recipes'
+33 error 404
+33 error 404 Note that you can also install from a
+33 error 404 tarball, folder, or http url, or git url.
+34 error System Darwin 14.0.0
+35 error command "node" "/usr/local/bin/npm" "i" "--save" "mondodb-uri"
+36 error cwd /Users/benjaminsorensen/services/services.recipes
+37 error node -v v0.10.32
+38 error npm -v 1.4.28
+39 error code E404
+40 verbose exit [ 1, true ]

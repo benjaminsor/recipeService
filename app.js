@@ -5,6 +5,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var uriUtil = require('mongodb-uri');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
@@ -64,13 +65,21 @@ var getStats = function() {
 var interval = 1 * 60 * 1000;
 setInterval(function() {
 	getStats();
-
 },interval);
 
 
 
 //MONGOOSE/DB CONNECTION
-mongoose.connect('mongodb://localhost/recipeApp');
+var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
+                replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } };       
+
+var mongodbUri = 'mongodb://heroku_app35620549:qfrmuvos2e3qk8d02eh8h9up8e@ds061751.mongolab.com:61751/heroku_app35620549';
+var mongooseUri = uriUtil.formatMongoose(mongodbUri);
+
+
+//mongoose.connect('mongodb://localhost/recipeApp');
+
+mongoose.connect(mongooseUri, options);
 
 
 
