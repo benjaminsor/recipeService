@@ -4,6 +4,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var multer  = require('multer');
 var mongoose = require('mongoose');
 var uriUtil = require('mongodb-uri');
 var passport = require('passport');
@@ -24,6 +25,7 @@ app.use(function(req, res, next) {
 });
 
 //CONFIGURE APP
+app.use(multer({ dest: './uploads/'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -77,12 +79,15 @@ var mongodbUri = 'mongodb://heroku_app35620549:qfrmuvos2e3qk8d02eh8h9up8e@ds0617
 var mongooseUri = uriUtil.formatMongoose(mongodbUri);
 
 
-//mongoose.connect('mongodb://localhost/recipeApp');
+mongoose.connect('mongodb://localhost/recipeApp');
 
-mongoose.connect(mongooseUri, options);
-
-
+//mongoose.connect(mongooseUri, options);
 
 
-app.listen(process.env.PORT || 5000);
+
+
+//app.listen(process.env.PORT || 5000);
+
+app.listen(8888);
+
 

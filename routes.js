@@ -2,6 +2,7 @@ var express = require('express');
 var passport = require('passport');
 var cheerio = require('cheerio');
 var request = require('request');
+var multer  = require('multer');
 var User = require('./models').User;
 var Recipe = require('./models').Recipe;
 var Feed = require('./models').Feed;
@@ -407,6 +408,13 @@ router.get('/api/scrape/:url', function(req, res) {
 		}
 	})
 })
+router.post('/api/file/upload', function(req, res) {
+	console.log(req.files);
+})
+
+
+
+
 
 
 module.exports = router;

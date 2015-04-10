@@ -16,6 +16,7 @@
     "express-session": "^1.10.3",
     "mongodb-uri": "^0.9.7",
     "mongoose": "^3.8.24",
+    "multer": "^0.1.8",
     "passport": "^0.2.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^1.0.0",
