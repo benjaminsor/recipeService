@@ -79,15 +79,15 @@ var mongodbUri = 'mongodb://heroku_app35620549:qfrmuvos2e3qk8d02eh8h9up8e@ds0617
 var mongooseUri = uriUtil.formatMongoose(mongodbUri);
 
 
-mongoose.connect('mongodb://localhost/recipeApp');
+//mongoose.connect('mongodb://localhost/recipeApp');
 
-//mongoose.connect(mongooseUri, options);
-
-
+mongoose.connect(mongooseUri, options);
 
 
-//app.listen(process.env.PORT || 5000);
 
-app.listen(8888);
+
+app.listen(process.env.PORT || 5000);
+
+//app.listen(8888);
 
 
