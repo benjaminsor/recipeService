@@ -26,6 +26,7 @@ app.use(function(req, res, next) {
 
 //CONFIGURE APP
 app.use(multer({ dest: './uploads/'}));
+app.use('/images', express.static('uploads'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());

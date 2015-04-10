@@ -3,6 +3,7 @@ var passport = require('passport');
 var cheerio = require('cheerio');
 var request = require('request');
 var multer  = require('multer');
+var fs = require('fs');
 var User = require('./models').User;
 var Recipe = require('./models').Recipe;
 var Feed = require('./models').Feed;
