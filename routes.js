@@ -410,7 +410,7 @@ router.get('/api/scrape/:url', function(req, res) {
 })
 router.post('/api/file/upload', function(req, res) {
 	console.log(req.files);
-	res.send(JSON.stringify(req.files));
+	res.send(req.files);
 })
 
 
