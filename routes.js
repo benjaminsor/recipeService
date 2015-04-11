@@ -409,6 +409,7 @@ router.get('/api/scrape/:url', function(req, res) {
 	})
 })
 router.post('/api/file/upload', function(req, res) {
+	console.log(req.files.name);
 	res.send(req.files.name);
 })
 
